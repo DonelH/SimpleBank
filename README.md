@@ -1,4 +1,4 @@
-a backend web service for a simple bank. It will provide APIs for the frontend to do the following things:
+A backend web service for a simple bank. It will provide APIs for the frontend to do the following things:
 
     Create and manage bank accounts.
 
