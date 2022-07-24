@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jul 21 19:09:30 2022
+# Make data base, printed on Sat Jul 23 15:26:43 2022
 
 # Variables
 
@@ -39,7 +39,7 @@ GOPATH = C:\Users\eldon\go
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_23868_GSAGIFDNVLQNDFGO
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_9696_KTVIXUGIJJVUYPNW
 # environment
 VS160COMCOMNTOOLS = C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\Tools\
 # environment
@@ -91,7 +91,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 23868
+VSCODE_PID = 9696
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -201,8 +201,7 @@ ALLUSERSPROFILE = C:\ProgramData
 # environment
 SESSIONNAME = Console
 # default
-.FEATURES := 
- target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
 # environment
 PROCESSOR_REVISION = 9e0d
 # environment
@@ -216,9 +215,9 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 13, GenuineIntel
 
 # Directories
 
-# . (key c:/Users/eldon/Documents/simplebank, mtime 1658371666): 15 files, no impossibilities.
+# . (key c:/Users/eldon/Documents/simplebank, mtime 1658531885): 16 files, no impossibilities.
 
-# 15 files, no impossibilities in 1 directories.
+# 16 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -282,7 +281,8 @@ migrateup:
 	migrate -path db/migration -database "postgresql://root:secret@localhost:5432/simple_bank?sslmode=disable" -verbose up
 
 # Not a target:
-.DEFAULT:
+.DEFAULT: 
+
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -347,13 +347,12 @@ createdb:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / s 
-trings = 30 / storage = 220 B / avg = 7 B
-# current buf: size = 8174 B / used = 220 B / count = 30 / avg = 7 B
+# strcache buffers: 1 (0) / strings = 31 / storage = 226 B / avg = 7 B
+# current buf: size = 8174 B / used = 226 B / count = 31 / avg = 7 B
 
-# strcache performance: lookups = 56 / hit rate = 46%
+# strcache performance: lookups = 57 / hit rate = 45%
 # hash-table stats:
-# Load=30/8192=0%, Rehash=0, Collisions=0/56=0%
-# Finished Make data base on Thu Jul 21 19:09:30 2022
+# Load=31/8192=0%, Rehash=0, Collisions=0/57=0%
+# Finished Make data base on Sat Jul 23 15:26:43 2022
 
  
