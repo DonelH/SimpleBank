@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Jul 23 15:26:43 2022
+# Make data base, printed on Sun Jul 24 11:16:46 2022
 
 # Variables
 
@@ -39,7 +39,7 @@ GOPATH = C:\Users\eldon\go
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_9696_KTVIXUGIJJVUYPNW
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_2644_UBLFHCGMXMXLFFAF
 # environment
 VS160COMCOMNTOOLS = C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\Tools\
 # environment
@@ -91,7 +91,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 9696
+VSCODE_PID = 2644
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -215,9 +215,9 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 13, GenuineIntel
 
 # Directories
 
-# . (key c:/Users/eldon/Documents/simplebank, mtime 1658531885): 16 files, no impossibilities.
+# . (key c:/Users/eldon/Documents/simplebank, mtime 1658645279): 18 files, no impossibilities.
 
-# 16 files, no impossibilities in 1 directories.
+# 18 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -236,7 +236,7 @@ migratedown:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-20 18:57:58
+#  Last modified 2022-07-23 23:57:11
 #  File has been updated.
 #  Successfully updated.
 
@@ -254,7 +254,7 @@ dropdb:
 #  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 8):
-	docker exec -it postgres12 dropdb simple_bank
+	docker exec -it postgres:14-alpine dropdb simple_bank
 
 migratedown1:
 #  Phony target (prerequisite of .PHONY).
@@ -281,8 +281,7 @@ migrateup:
 	migrate -path db/migration -database "postgresql://root:secret@localhost:5432/simple_bank?sslmode=disable" -verbose up
 
 # Not a target:
-.DEFAULT: 
-
+.DEFAULT:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -303,7 +302,8 @@ test:
 
 sqlc:
 #  Phony target (prerequisite of .PHONY).
-#  Implicit rule search has not been done.
+#  Implicit rule 
+ search has not been done.
 #  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 23):
@@ -323,7 +323,7 @@ postgres:
 #  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 2):
-	docker run --name postgres12 -p 5432:5432 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=secret -d postgres:12-alpine
+	docker run --name postgres --network bank-network -p 5432:5432 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=secret -d postgres:14-alpine
 	
 
 createdb:
@@ -332,7 +332,7 @@ createdb:
 #  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 5):
-	docker exec -it postgres12 createdb --username=root --owner=root simple_bank
+	docker exec -it postgres:14-alpine createdb --username=root --owner=root simple_bank
 
 .PHONY: postgres createdb dropdb migrateup migratedown sqlc server mock migratedown1 migrateup1
 #  Implicit rule search has not been done.
@@ -347,12 +347,12 @@ createdb:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 31 / storage = 226 B / avg = 7 B
-# current buf: size = 8174 B / used = 226 B / count = 31 / avg = 7 B
+# strcache buffers: 1 (0) / strings = 33 / storage = 257 B / avg = 7 B
+# current buf: size = 8174 B / used = 257 B / count = 33 / avg = 7 B
 
-# strcache performance: lookups = 57 / hit rate = 45%
+# strcache performance: lookups = 59 / hit rate = 44%
 # hash-table stats:
-# Load=31/8192=0%, Rehash=0, Collisions=0/57=0%
-# Finished Make data base on Sat Jul 23 15:26:43 2022
+# Load=33/8192=0%, Rehash=0, Collisions=0/59=0%
+# Finished Make data base on Sun Jul 24 11:16:46 2022
 
  
