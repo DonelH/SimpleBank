@@ -1,5 +1,5 @@
 make.exe --dry-run --always-make --keep-going --print-directory
 make: Entering directory 'c:/Users/eldon/Documents/simplebank'
-docker run --name postgres12 -p 5432:5432 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=secret -d postgres:12-alpine
+docker run --name postgres --network bank-network -p 5432:5432 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=secret -d postgres:14-alpine
 make: Leaving directory 'c:/Users/eldon/Documents/simplebank'
  
