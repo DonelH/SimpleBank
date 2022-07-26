@@ -49,3 +49,21 @@ jobs:
 
     - name: Test
       run: make test
+      
+  fossa-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout Code"
+        uses: actions/checkout@v2
+
+      - name: "Run FOSSA Scan"
+        uses: fossas/fossa-action@v1
+        with:
+          api-key: ${{secrets.fossaAPIKey}}
+
+      - name: "Run FOSSA Test"
+        continue-on-error: true
+        uses: fossas/fossa-action@v1
+        with:
+          api-key: ${{secrets.fossaAPIKey}}
+          run-tests: true
