@@ -59,7 +59,7 @@ jobs:
       - name: "Run FOSSA Scan"
         uses: fossas/fossa-action@v1
         with:
-          api-key: ${{secrets.fossaPIKey}}
+          api-key: ${{secrets.fossaAPIKey}}
 
       - name: "Run FOSSA Test"
         uses: fossas/fossa-action@v1
