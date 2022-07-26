@@ -1,0 +1,4 @@
+app:
+  applicationId: e3baa8d3-b0b3-43ce-a8b8-cb80d8a3b5e0
+  env: Production
+  host: https://api.simplerbank.net
